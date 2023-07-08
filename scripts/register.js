@@ -18,7 +18,7 @@ class User {
     grade101,
     grade102,
     grade103,
-    avg
+    lettergrade
   ) {
     this.email = email;
     this.password = password;
@@ -28,7 +28,7 @@ class User {
     this.grade101 = grade101;
     this.grade102 = grade102;
     this.grade103 = grade103;
-    this.avg = avg;
+    this.lettergrade = lettergrade;
   }
 }
 
@@ -62,6 +62,8 @@ function register() {
         parseFloat($grade103.val())) /
       3;
 
+    const letterGrade = gradeEquivalent(averageGrade);
+
     userArr.push(
       new User(
         $eMail.val(),
@@ -72,9 +74,10 @@ function register() {
         $grade101.val(),
         $grade102.val(),
         $grade103.val(),
-        averageGrade
+        letterGrade
       )
     );
+    console.log(userArr);
     saveUser(userArr);
   }
   clearFormData();
