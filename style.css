@@ -45,6 +45,9 @@
   color: #481d24;
   background-color: rgba(233, 114, 76, 0.25);
 }
+* .error {
+  border: 0.125rem solid #c5283d;
+}
 
 body header nav ul {
   justify-content: flex-end;

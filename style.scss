@@ -52,6 +52,10 @@
     color: #481d24;
     background-color: rgba($color: #e9724c, $alpha: 0.25);
   }
+
+  .error {
+    border: 0.125rem solid #c5283d;
+  }
 }
 
 body {

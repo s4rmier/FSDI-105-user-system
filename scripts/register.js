@@ -46,23 +46,7 @@ let inputFields = [
 ];
 
 function register() {
-  if (
-    //validate if input is valid
-    $eMail.val() == "" ||
-    $password.val() == "" ||
-    $firstName.val() == "" ||
-    $lastName.val() == "" ||
-    $age.val() == "" ||
-    $grade101.val() == "" ||
-    $grade102.val() === "" ||
-    $grade103.val() == "" || //validate if grade entered is greater than 4 or less than 0
-    $grade101.val() > 4 ||
-    $grade102.val() > 4 ||
-    $grade103.val() > 4 ||
-    $grade101.val() < 0 ||
-    $grade102.val() < 0 ||
-    $grade103.val() < 0
-  ) {
+  if (!validateFormData(inputFields)) {
     alert("Enter Valid Input");
     return;
   } else {
