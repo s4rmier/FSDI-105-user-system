@@ -1,12 +1,25 @@
 // acquire input data
-var $eMail = $("#reg-email");
-var $password = $("#reg-password");
-var $firstName = $("#reg-fname");
-var $lastName = $("#reg-lname");
-var $age = $("#reg-age");
-var $grade101 = $("#reg-grade101");
-var $grade102 = $("#reg-grade102");
-var $grade103 = $("#reg-grade103");
+var inputFields = [
+  $("#reg-email"),
+  $("#reg-password"),
+  $("#reg-fname"),
+  $("#reg-lname"),
+  $("#reg-age"),
+  $("#reg-grade101"),
+  $("#reg-grade102"),
+  $("#reg-grade103"),
+];
+
+let [
+  $eMail,
+  $password,
+  $firstName,
+  $lastName,
+  $age,
+  $grade101,
+  $grade102,
+  $grade103,
+] = inputFields;
 
 class User {
   constructor(
@@ -34,18 +47,8 @@ class User {
   }
 }
 
-let inputFields = [
-  $eMail,
-  $password,
-  $firstName,
-  $lastName,
-  $age,
-  $grade101,
-  $grade102,
-  $grade103,
-];
-
 function register() {
+  // form validation
   if (!validateFormData(inputFields)) {
     alert("Enter Valid Input");
     return;
@@ -60,6 +63,7 @@ function register() {
     const letterGrade = gradeEquivalent(averageGrade);
 
     saveUser(
+      //newuser is sent to local storage
       new User(
         $eMail.val(),
         $password.val(),
