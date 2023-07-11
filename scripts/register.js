@@ -18,6 +18,7 @@ class User {
     grade101,
     grade102,
     grade103,
+    avg,
     lettergrade
   ) {
     this.email = email;
@@ -28,11 +29,21 @@ class User {
     this.grade101 = grade101;
     this.grade102 = grade102;
     this.grade103 = grade103;
+    this.avg = avg;
     this.lettergrade = lettergrade;
   }
 }
 
-const userArr = [];
+let inputFields = [
+  $eMail,
+  $password,
+  $firstName,
+  $lastName,
+  $age,
+  $grade101,
+  $grade102,
+  $grade103,
+];
 
 function register() {
   if (
@@ -56,7 +67,7 @@ function register() {
     return;
   } else {
     // if input is valid record user to array
-    let averageGrade =
+    const averageGrade =
       (parseFloat($grade101.val()) +
         parseFloat($grade102.val()) +
         parseFloat($grade103.val())) /
@@ -64,7 +75,7 @@ function register() {
 
     const letterGrade = gradeEquivalent(averageGrade);
 
-    userArr.push(
+    saveUser(
       new User(
         $eMail.val(),
         $password.val(),
@@ -74,26 +85,16 @@ function register() {
         $grade101.val(),
         $grade102.val(),
         $grade103.val(),
+        parseFloat(averageGrade).toFixed(2),
         letterGrade
       )
     );
-    console.log(userArr);
-    saveUser(userArr);
   }
-  clearFormData();
+  clearFormData(inputFields);
 }
 
-function clearFormData() {
-  $eMail.val("");
-  $password.val("");
-  $firstName.val("");
-  $lastName.val("");
-  $age.val("");
-  $grade101.val("");
-  $grade102.val("");
-  $grade103.val("");
+function init() {
+  clearFormData(inputFields);
 }
-
-function init() {}
 
 window.onload = init;

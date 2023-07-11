@@ -11,15 +11,14 @@
   box-sizing: border-box;
   text-decoration: none;
   line-height: 1.125;
-  --font-title-reg: "Poppins", sans-serif;
-  --font-body-reg: "Lora", serif;
-  --font-utility: "Roboto", sans-serif;
+  --font-title-reg: "Poppins";
+  --font-body-reg: "Lora";
+  --font-utility: "Roboto";
   --col-main-dark: #1b435f;
   --col-main-light: #ffc857;
   --col-sec-dark: #481d24;
   --col-sec-light: #e9724c;
   --col-utility: #c5283d;
-  color: var(--col-main-dark);
 
   font-family: var(--font-utility);
 
@@ -48,6 +47,11 @@
     max-width: 1280px;
     margin: 0 auto;
   }
+
+  .failing {
+    color: #481d24;
+    background-color: rgba($color: #e9724c, $alpha: 0.25);
+  }
 }
 
 body {
@@ -65,6 +69,30 @@ body {
   main {
     div.form-field {
       padding: 1rem;
+    }
+
+    .user-data {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem;
+      thead {
+        font-size: 1.25rem;
+      }
+      tbody {
+        font-size: 1.25rem;
+      }
+    }
+    th,
+    td {
+      padding: 1rem;
+    }
+
+    th {
+      border-bottom: 0.125rem solid #1b435f;
+    }
+
+    tr {
+      border-bottom: 0.05rem solid rgba($color: #1b435f, $alpha: 0.5);
     }
   }
 }
