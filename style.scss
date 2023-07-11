@@ -11,9 +11,9 @@
   box-sizing: border-box;
   text-decoration: none;
   line-height: 1.125;
-  --font-title-reg: "Poppins";
-  --font-body-reg: "Lora";
-  --font-utility: "Roboto";
+  --font-title-reg: Poppins;
+  --font-body-reg: Lora;
+  --font-utility: Roboto;
   --col-main-dark: #1b435f;
   --col-main-light: #ffc857;
   --col-sec-dark: #481d24;
@@ -63,6 +63,20 @@ body {
           margin: 0rem 1rem;
         }
       }
+    }
+  }
+
+  main.cover-page {
+    img {
+      width: 100%;
+      margin: 6rem 0rem;
+    }
+    h1,
+    h2,
+    h3,
+    p {
+      text-align: center;
+      font-family: var(--font-title-reg);
     }
   }
 
