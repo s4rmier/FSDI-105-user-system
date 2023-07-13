@@ -82,6 +82,7 @@ function register() {
 }
 
 function init() {
+  $("#reg-button").click(register);
   clearFormData(inputFields);
 }
 

@@ -59,6 +59,7 @@
 }
 
 body {
+  padding: 2rem 1rem;
   header {
     nav {
       ul {
@@ -89,6 +90,12 @@ body {
       padding: 1rem;
     }
 
+    hr {
+      margin-top: 3rem;
+      height: 3px;
+      background-color: #1b435f;
+    }
+
     .user-data {
       width: 100%;
       border-collapse: collapse;
@@ -111,6 +118,26 @@ body {
 
     tr {
       border-bottom: 0.05rem solid rgba($color: #1b435f, $alpha: 0.5);
+    }
+
+    section.login {
+      margin: 3rem 0rem;
+      padding: 1rem;
+      label,
+      input,
+      button.button {
+        font-family: var(--font-title-reg);
+      }
+
+      input {
+        margin: 1rem 0rem;
+        padding: 0.5rem 1rem;
+        width: 35%;
+      }
+
+      button.button {
+        padding: 0.25rem 1rem;
+      }
     }
   }
 }

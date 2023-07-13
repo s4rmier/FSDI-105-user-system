@@ -18,7 +18,7 @@
       <nav class="container">
         <ul class="flex-row align">
           <li><a href="register.html">Register</a></li>
-          <li><a href="users.html">Users</a></li>
+          <!-- <li><a href="users.html">Users</a></li> -->
           <li><a href="index.html">Login</a></li>
         </ul>
       </nav>
@@ -35,6 +35,22 @@
         The scope of this project is to learn how to utilize local storage,
         retrieve data from local storage, and display data from local storage.
       </p>
+
+      <hr />
+
+      <section class="login flex-col justify container">
+        <div class="flex-col align justify">
+          <label for="">E-Mail/Username:</label>
+          <input id="log-in-email" type="text" />
+        </div>
+        <div class="flex-col align justify">
+          <label for="">Password</label>
+          <input type="password" name="" id="log-in-password" />
+        </div>
+        <div class="flex-col align">
+          <button id="log-in-button" class="button">Log In</button>
+        </div>
+      </section>
     </main>
 
     <script
@@ -42,5 +58,9 @@
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
       crossorigin="anonymous"
     ></script>
+    <script src="./scripts/storeManager.js"></script>
+    <script src="./scripts/clearFormData.js"></script>
+    <script src="./scripts/validateFormData.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
