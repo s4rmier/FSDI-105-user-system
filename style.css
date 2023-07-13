@@ -114,4 +114,9 @@ body main section.login input {
 }
 body main section.login button.button {
   padding: 0.25rem 1rem;
+}
+body main .error-message {
+  font-family: var(--font-title-reg);
+  color: #c5283d;
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */

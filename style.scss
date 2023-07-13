@@ -139,5 +139,11 @@ body {
         padding: 0.25rem 1rem;
       }
     }
+
+    .error-message {
+      font-family: var(--font-title-reg);
+      color: #c5283d;
+      font-size: 1rem;
+    }
   }
 }

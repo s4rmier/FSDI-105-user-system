@@ -28,11 +28,10 @@ function isRegistered(username, password) {
 }
 
 function login() {
-  if (!validateFormData(logInInputs)) {
-    alert("Please enter valid input");
-  } else if (!isRegistered($logInEmail, $logInPass)) {
+  let errorMessage = $("#login-error");
+  if (!isRegistered($logInEmail, $logInPass)) {
     // check if user is registered
-    alert("Incorrect Username/Password");
+    errorMessage.text("Incorrect credentials. Please try again");
   } else {
     // trigger successful log in event
     console.log("Successfully logged in!");

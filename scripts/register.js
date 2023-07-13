@@ -47,13 +47,15 @@ class User {
   }
 }
 
+let errorMessage = $("#error-message");
 function register() {
   // form validation
   if (!validateFormData(inputFields)) {
-    alert("Enter Valid Input");
+    errorMessage.text("Invalid Input. Please try again");
     return;
   } else {
     // if input is valid record user to array
+    errorMessage.text("");
     const averageGrade =
       (parseFloat($grade101.val()) +
         parseFloat($grade102.val()) +
